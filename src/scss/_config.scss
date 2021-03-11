@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Karla&display=swap');
+
+$primary-color: #ef233c;
+$secondary-color: #000;
+$text-color: #444444;
+$neutral-color-1: #8d99ae;
+$neutral-color-2: #edf2f4;
+$neutral-color-3: #f0f0f0;
+$ff-primary: 'Cinzel', serif;
+$ff-secondary: 'Karla', sans-serif;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-secondary;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: $text-color;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-primary;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+// Transition
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+// Media Queries
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+@include media-xl {
+  .container {
+    max-width: 1400px;
+  }
+}
