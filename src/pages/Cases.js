@@ -1,10 +1,16 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader';
+import bgImg from '../images/image-1.jpg';
 
 const Cases = () => {
   return (
-    <div>
-      <h1>cases</h1>
-    </div>
+    <>
+      <PageHeader
+        headline='Cases'
+        subheading='Bailey Chambers // Cases'
+        img={bgImg}
+      />
+    </>
   );
 };
 

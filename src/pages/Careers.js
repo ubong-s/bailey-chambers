@@ -1,10 +1,17 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader';
+
+import bgImg from '../images/image-3.jpg';
 
 const Careers = () => {
   return (
-    <div>
-      <h1>Careers</h1>
-    </div>
+    <>
+      <PageHeader
+        headline='Careers'
+        subheading='Bailey Chambers // Careers'
+        img={bgImg}
+      />
+    </>
   );
 };
 

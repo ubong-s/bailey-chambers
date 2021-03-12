@@ -1,15 +1,19 @@
-@import './config';
+@import '../config';
 
 header {
   .menu {
     position: fixed;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     background: $secondary-color;
     height: 100vh;
     width: 100vw;
     color: $neutral-color-1;
-    padding: 1rem 0;
+    padding: 3rem 0;
     transform: translateX(-100%);
     @include transition-ease;
+    z-index: 100;
 
     .container {
       position: relative;
@@ -83,12 +87,15 @@ header {
     }
 
     &-logo {
-      width: 30%;
+      position: relative;
+      width: 35%;
+      z-index: 100;
     }
 
     &-burger {
       font-size: 2rem;
       z-index: 100;
+      color: $primary-color;
     }
   }
 
@@ -131,6 +138,11 @@ header {
           font-size: 0.75rem;
           color: $neutral-color-3;
 
+          .icon {
+            color: $primary-color;
+            margin-right: 0.25rem;
+          }
+
           a {
             color: $neutral-color-3;
           }
@@ -155,7 +167,7 @@ header {
       }
 
       &-bottom {
-        padding: 1.5rem 0;
+        padding: 1rem 0;
 
         .container {
           display: flex;
@@ -173,14 +185,18 @@ header {
             font-size: 1.25rem;
 
             a {
-              color: $primary-color;
+              color: $secondary-color;
 
               &:active,
               &:hover {
-                color: $secondary-color;
+                color: $primary-color;
               }
             }
           }
+        }
+
+        &-logo {
+          width: 70%;
         }
       }
     }

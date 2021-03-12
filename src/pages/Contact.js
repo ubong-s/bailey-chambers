@@ -1,10 +1,17 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader';
+
+import bgImg from '../images/image-5.jpg';
 
 const Contact = () => {
   return (
-    <div>
-      <h1>contact</h1>
-    </div>
+    <>
+      <PageHeader
+        headline='Contact'
+        subheading='Bailey Chambers // Contact'
+        img={bgImg}
+      />
+    </>
   );
 };
 

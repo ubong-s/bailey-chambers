@@ -13,13 +13,15 @@ import {
 } from 'react-icons/fa';
 import logo from '../logo.svg';
 import logoAlt from '../logo_alt.svg';
-import '../scss/Navbar.scss';
+import '../scss/components/Navbar.scss';
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
-  const toggleMenu = () => setClick(!click);
+  const toggleMenu = () => {
+    setClick(!click);
+  };
   const closeMenu = () => setClick(false);
 
   return (
@@ -48,15 +50,18 @@ const Navbar = () => {
         <div className='nav-top'>
           <div className='container'>
             <ul className='nav-top-col-links'>
-              <li>Open Hours: Mon-Fri 9.00AM - 5.00PM</li>
+              <li>
+                <FaClock className='icon' /> Open Hours: Mon-Fri 9.00AM - 5.00PM
+              </li>
               <li>
                 <a href='#'>
-                  <FaPhone /> +234-123-456-7890
+                  <FaPhone className='icon' /> +234-123-456-7890
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <FaLocationArrow /> 123 Address, Uyo, Akwa Ibom State.
+                  <FaLocationArrow className='icon' /> 123 Address, Uyo, Akwa
+                  Ibom State.
                 </a>
               </li>
             </ul>
@@ -84,7 +89,7 @@ const Navbar = () => {
         <div className='nav-bottom'>
           <div className='container'>
             <Link to='/'>
-              <img className='nav-logo' src={logoAlt} alt='Bailey' />
+              <img className='nav-bottom-logo' src={logoAlt} alt='Bailey' />
             </Link>
             <ul className='menu-nav'>
               <li className='menu-nav-item'>

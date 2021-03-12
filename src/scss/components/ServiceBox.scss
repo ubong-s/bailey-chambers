@@ -1,0 +1,71 @@
+@import '../config';
+
+.service-box {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &-img {
+    position: relative;
+    line-height: 0;
+
+    img {
+      z-index: 3;
+    }
+
+    .icon {
+      display: none;
+      color: white;
+      z-index: 3;
+      font-size: 2rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: grid;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      top: 0;
+      left: 0;
+      border: 2rem solid transparent;
+      transform: scale(0.8);
+      opacity: 0;
+      @include transition-ease;
+    }
+
+    &:hover {
+      &:hover::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        top: 0;
+        left: 0;
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-info {
+    background-color: $secondary-color-2;
+    padding: 1.5rem;
+    color: $neutral-color-3;
+
+    h4 {
+      font-size: 1.25rem;
+      color: $primary-color;
+    }
+  }
+}

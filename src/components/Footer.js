@@ -8,7 +8,7 @@ import {
   FaLocationArrow,
   FaPhone,
 } from 'react-icons/fa';
-import '../scss/Footer.scss';
+import '../scss/components/Footer.scss';
 import logo from '../logo.svg';
 
 const Footer = () => {

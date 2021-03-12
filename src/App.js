@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import './scss/App.scss';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/contact' component={Contact} />
         <Route path='/privacy-policy' component={PrivacyPolicy} />
         <Route path='/terms-of-service' component={TermsOfService} />
+        <Route path='*' component={Error} />
       </Switch>
       <Footer />
     </Router>

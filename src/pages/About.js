@@ -1,10 +1,16 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader';
+import bgImg from '../images/image-6.jpg';
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <>
+      <PageHeader
+        headline='About Us'
+        subheading='Bailey Chambers // About Us'
+        img={bgImg}
+      />
+    </>
   );
 };
 

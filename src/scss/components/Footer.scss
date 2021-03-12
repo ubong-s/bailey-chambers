@@ -1,4 +1,4 @@
-@import './config';
+@import '../config';
 
 footer {
   background-color: $secondary-color;
@@ -85,8 +85,8 @@ footer {
   }
 
   .copyright {
-    padding: 1.5rem 0;
-    border-top: 0.1px solid $neutral-color-1;
+    padding: 1rem 0 0.5rem;
+    background-color: $secondary-color-2;
   }
 }
 
@@ -94,10 +94,6 @@ footer {
 @include media-md {
   footer {
     .footer {
-      grid-template-columns: 1.25fr 1fr 1fr 1.25fr;
-      gap: 2.5rem;
-      grid-template-areas: 'logoinfo link1 link2 social';
-
       padding: 4rem 0 2rem;
 
       &-col-notice {
@@ -109,6 +105,10 @@ footer {
           margin-bottom: 0;
         }
       }
+    }
+
+    .copyright {
+      display: flex;
     }
   }
 }
@@ -122,6 +122,8 @@ footer {
     .footer {
       gap: 4rem;
       padding: 6rem 0 3rem;
+      grid-template-columns: 1.25fr 1fr 1fr 1.25fr;
+      grid-template-areas: 'logoinfo link1 link2 social';
 
       &-col {
         margin: 0;
@@ -161,7 +163,7 @@ footer {
       }
     }
     .copyright {
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
   }
 }
