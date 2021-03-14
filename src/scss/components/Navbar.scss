@@ -4,16 +4,19 @@ header {
   .menu {
     position: fixed;
     display: grid;
-    align-items: center;
-    justify-items: center;
-    background: $secondary-color;
+    background: white;
     height: 100vh;
-    width: 100vw;
-    color: $neutral-color-1;
-    padding: 3rem 0;
-    transform: translateX(-100%);
+    width: 80vw;
+    right: 0;
+    color: $secondary-color;
+    padding: 2rem 0;
+    transform: translateX(100%);
     @include transition-ease;
     z-index: 100;
+
+    @include media-md {
+      width: 50vw;
+    }
 
     .container {
       position: relative;
@@ -26,45 +29,47 @@ header {
 
     &-list {
       padding: 2rem 0 0;
-      text-align: center;
+      text-align: left;
       font-family: $ff-primary;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 600;
 
+      &-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid $neutral-color-3;
+      }
+
       a {
-        margin-bottom: 1rem;
-        color: $neutral-color-1;
+        color: $secondary-color;
       }
     }
 
     &-social {
       display: flex;
-      justify-content: center;
-      padding-top: 1rem;
+      padding-top: 3rem;
 
       &-item {
-        margin: 0 1rem;
+        margin-right: 1.5rem;
 
         a {
           font-size: 2rem;
-          color: $neutral-color-1;
+          color: $secondary-color;
         }
       }
     }
 
     &-contact {
       padding: 2rem 0 0;
-      text-align: center;
-      font-family: $ff-primary;
+      font-family: $ff-secondary;
       font-size: 0.8rem;
 
       &-item {
-        color: $neutral-color-1;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
       }
 
       a {
-        margin-bottom: 1rem;
-        color: $neutral-color-1;
+        color: $secondary-color;
       }
     }
 
@@ -90,12 +95,16 @@ header {
       position: relative;
       width: 35%;
       z-index: 100;
+
+      @include media-md {
+        width: 25%;
+      }
     }
 
     &-burger {
       font-size: 2rem;
       z-index: 100;
-      color: $primary-color;
+      color: $secondary-color;
     }
   }
 
@@ -196,7 +205,7 @@ header {
         }
 
         &-logo {
-          width: 70%;
+          width: 60%;
         }
       }
     }

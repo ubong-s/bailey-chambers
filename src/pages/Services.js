@@ -11,6 +11,7 @@ import '../scss/pages/Services.scss';
 
 import bgImg from '../images/image-2.jpg';
 import OurExperts from '../components/OurExperts';
+import CTA from '../components/CTA';
 
 const Services = () => {
   return (
@@ -55,6 +56,7 @@ const Services = () => {
         </div>
       </section>
       <OurExperts />
+      <CTA headline='Interested in our services' />
     </>
   );
 };

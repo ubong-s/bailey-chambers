@@ -1,0 +1,19 @@
+@import '../config';
+
+.careers {
+  display: grid;
+  gap: 2rem;
+
+  @include media-lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+.career {
+  background: $neutral-color-2;
+  color: $secondary-color;
+  padding: 2rem;
+}

@@ -4,13 +4,11 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaEnvelope,
   FaLocationArrow,
   FaPhone,
   FaClock,
-  FaTimes,
-  FaBars,
 } from 'react-icons/fa';
+import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 import logo from '../logo.svg';
 import logoAlt from '../logo_alt.svg';
 import '../scss/components/Navbar.scss';
@@ -35,12 +33,13 @@ const Navbar = () => {
           <MobileMenu />
         </div>
       )}
-      <div className='container'>
-        <div className='mobile'>
+
+      <div className='mobile'>
+        <div className='container'>
           <div className='mobile-nav'>
             <img className='mobile-logo' src={logoAlt} alt='Bailey' />
             <div className='mobile-burger' onClick={toggleMenu}>
-              {click ? <FaTimes style={{ color: '#8d99ae' }} /> : <FaBars />}
+              {click ? <AiOutlineCloseCircle /> : <AiOutlineMenu />}
             </div>
           </div>
         </div>

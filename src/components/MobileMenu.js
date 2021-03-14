@@ -4,14 +4,9 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaEnvelope,
   FaLocationArrow,
   FaPhone,
-  FaClock,
-  FaTimes,
-  FaBars,
 } from 'react-icons/fa';
-import logo from '../logo.svg';
 import '../scss/components/Navbar.scss';
 
 const MobileMenu = ({ closeMenu }) => {

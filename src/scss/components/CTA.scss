@@ -1,0 +1,46 @@
+@import '../config';
+
+.cta {
+  position: relative;
+  padding: 4rem 0;
+  background: url(../../images/service-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $neutral-color-2;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000, $alpha: 0.8);
+  }
+
+  h3 {
+    position: relative;
+    font-size: 2rem;
+    z-index: 3;
+  }
+
+  a {
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+      background-color: $neutral-color-3;
+      color: $secondary-color;
+    }
+  }
+
+  @include media-lg {
+    padding: 5rem 0;
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}

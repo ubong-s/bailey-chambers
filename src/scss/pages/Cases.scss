@@ -1,0 +1,76 @@
+@import '../config';
+
+.cases {
+  display: grid;
+  gap: 2rem;
+
+  @include media-lg {
+    gap: 4rem;
+  }
+}
+
+.case {
+  &-img {
+    line-height: 0;
+  }
+
+  &-info {
+    background-color: $secondary-color-2;
+    padding: 2rem 2rem 2rem;
+    color: $neutral-color-2;
+
+    h2 {
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+
+    h4,
+    h5 {
+      margin-bottom: 0.5rem;
+      list-style: 0;
+    }
+
+    p {
+      color: $neutral-color-1;
+      line-height: 1.3;
+    }
+
+    &-inner {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @include media-lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'img info';
+
+    &-img {
+      grid-area: img;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-info {
+      display: grid;
+      grid-area: info;
+      padding: 2.5rem 2.5rem 1rem;
+      align-content: center;
+
+      &-inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.reverse {
+  grid-template-areas: 'info img';
+}

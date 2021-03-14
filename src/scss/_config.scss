@@ -101,7 +101,7 @@ section {
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   background-color: $primary-color;
   color: $secondary-color;
   @include transition-ease;
@@ -114,6 +114,8 @@ section {
   border-radius: 0.25rem;
   margin-top: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
 
   &:hover {
     background-color: $secondary-color;
