@@ -17,6 +17,11 @@ const MobileMenu = ({ closeMenu }) => {
       </Link> */}
       <ul className='menu-list'>
         <li className='menu-list-item'>
+          <Link to='/' className='menu-list-link' onClick={closeMenu}>
+            Home
+          </Link>
+        </li>
+        <li className='menu-list-item'>
           <Link to='/about' className='menu-list-link' onClick={closeMenu}>
             About
           </Link>

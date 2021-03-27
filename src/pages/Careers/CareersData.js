@@ -29,4 +29,10 @@ export const CareersData = [
     description:
       'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora',
   },
+  {
+    id: 6,
+    position: 'Office Assistant',
+    description:
+      'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora',
+  },
 ];

@@ -1,6 +1,12 @@
 @import '../config';
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color: white;
+
   .menu {
     position: fixed;
     display: grid;
@@ -32,7 +38,7 @@ header {
       text-align: left;
       font-family: $ff-primary;
       font-size: 1.25rem;
-      font-weight: 600;
+      font-weight: 500;
 
       &-item {
         padding: 0.75rem 0;
@@ -83,7 +89,7 @@ header {
   }
 
   .mobile {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 
     &-nav {
       display: flex;
@@ -93,18 +99,17 @@ header {
 
     &-logo {
       position: relative;
-      width: 35%;
+      width: 45%;
       z-index: 100;
-
-      @include media-md {
-        width: 25%;
-      }
+      line-height: 0;
     }
 
     &-burger {
       font-size: 2rem;
       z-index: 100;
       color: $secondary-color;
+      cursor: pointer;
+      line-height: 0;
     }
   }
 
@@ -132,7 +137,7 @@ header {
 
       &-top {
         background-color: $secondary-color;
-        padding: 0.75rem 0;
+        padding: 0.5rem 0;
 
         .container {
           display: flex;
@@ -176,7 +181,9 @@ header {
       }
 
       &-bottom {
-        padding: 1rem 0;
+        padding: 1.5rem 0;
+        background-color: #fff;
+        @include transition-ease;
 
         .container {
           display: flex;
@@ -186,6 +193,7 @@ header {
 
         .menu-nav {
           display: flex;
+          align-items: center;
 
           &-item {
             margin-left: 1.5rem;
@@ -205,9 +213,41 @@ header {
         }
 
         &-logo {
-          width: 60%;
+          line-height: 0;
+
+          img {
+            width: 40%;
+          }
+        }
+      }
+
+      .fixed-nav {
+        padding: 1.25rem 0;
+        background: $secondary-color-2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        @include transition-ease;
+        animation: slideDown 0.5s ease-in-out;
+        box-shadow: $dark-shadow;
+
+        a {
+          color: #fff;
         }
       }
     }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -12,10 +12,13 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import './scss/App.scss';
 import Error from './pages/Error';
+import ScrollToTop from './components/scrollToTop';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
@@ -28,6 +31,7 @@ function App() {
         <Route path='/terms-of-service' component={TermsOfService} />
         <Route path='*' component={Error} />
       </Switch>
+      <BackToTop />
       <Footer />
     </Router>
   );

@@ -1,0 +1,123 @@
+@import '../config';
+
+.slide {
+  position: relative;
+  height: 60vh;
+
+  @include media-lg {
+    height: 90vh;
+  }
+
+  &-img {
+    opacity: 0;
+    transition: 1s ease;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include media-lg {
+        object-position: top;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+      z-index: 2;
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      p {
+        padding: 0 1rem;
+      }
+
+      @include media-lg {
+        left: 20%;
+        width: 60%;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($secondary-color, $alpha: 0.7);
+      z-index: 1;
+    }
+  }
+
+  .left-arrow {
+    position: absolute;
+    font-size: 2rem;
+    left: 10px;
+    top: 50%;
+    z-index: 3;
+    cursor: pointer;
+    color: $neutral-color-3;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.4;
+      color: $primary-color;
+    }
+
+    @include media-lg {
+      left: 2%;
+      font-size: 3rem;
+    }
+  }
+
+  .right-arrow {
+    position: absolute;
+    font-size: 2rem;
+    right: 10px;
+    top: 50%;
+    z-index: 3;
+    cursor: pointer;
+    color: $neutral-color-3;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.4;
+      color: $primary-color;
+    }
+
+    @include media-lg {
+      right: 2%;
+      font-size: 3rem;
+    }
+  }
+}
+
+.slide-img.active {
+  opacity: 1;
+  transition: 1s ease;
+}

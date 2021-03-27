@@ -12,53 +12,6 @@ $ff-secondary: 'Karla', sans-serif;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $ff-secondary;
-  font-size: 1rem;
-  margin: 0;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  color: $text-color;
-  font-weight: 400;
-}
-
-img {
-  width: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $ff-primary;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  letter-spacing: 1.5px;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
 // Transition
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
@@ -78,47 +31,5 @@ p {
 @mixin media-xl {
   @media screen and (min-width: 1600px) {
     @content;
-  }
-}
-
-section {
-  padding: 4rem 0;
-
-  @include media-lg() {
-    padding: 7rem 0;
-  }
-}
-
-.container {
-  width: 85%;
-  margin: auto;
-}
-
-@include media-xl {
-  .container {
-    max-width: 1400px;
-  }
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  background-color: $primary-color;
-  color: $secondary-color;
-  @include transition-ease;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  margin-top: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border: none;
-  outline: none;
-
-  &:hover {
-    background-color: $secondary-color;
-    color: $neutral-color-3;
   }
 }

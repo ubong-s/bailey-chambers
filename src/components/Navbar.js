@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useWindowScroll } from 'react-use';
 import {
   FaFacebook,
   FaTwitter,
@@ -16,11 +17,26 @@ import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [fixedNav, setFixedNav] = useState(false);
+
+  const { y: pageYOffset } = useWindowScroll();
+
+  const showFixedNav = () => {
+    if (pageYOffset > 400) {
+      setFixedNav(true);
+    } else {
+      setFixedNav(false);
+    }
+  };
 
   const toggleMenu = () => {
     setClick(!click);
   };
   const closeMenu = () => setClick(false);
+
+  useEffect(() => {
+    showFixedNav();
+  }, [pageYOffset]);
 
   return (
     <header>
@@ -37,7 +53,9 @@ const Navbar = () => {
       <div className='mobile'>
         <div className='container'>
           <div className='mobile-nav'>
-            <img className='mobile-logo' src={logoAlt} alt='Bailey' />
+            <Link to='/' onClick={closeMenu} className='mobile-logo'>
+              <img src={logoAlt} alt='Bailey' />
+            </Link>
             <div className='mobile-burger' onClick={toggleMenu}>
               {click ? <AiOutlineCloseCircle /> : <AiOutlineMenu />}
             </div>
@@ -85,10 +103,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className='nav-bottom'>
+        <div className={fixedNav ? 'nav-bottom fixed-nav' : 'nav-bottom'}>
           <div className='container'>
-            <Link to='/'>
-              <img className='nav-bottom-logo' src={logoAlt} alt='Bailey' />
+            <Link to='/' className='nav-bottom-logo'>
+              <img src={logoAlt} alt='Bailey' />
             </Link>
             <ul className='menu-nav'>
               <li className='menu-nav-item'>
