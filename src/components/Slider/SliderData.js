@@ -13,7 +13,7 @@ export const SliderData = [
   },
   {
     image: slideImg2,
-    headline: 'Award winning Law Firm',
+    headline: 'Award winning Firm',
     subheading: 'Natus culpa minus iste voluptas atque dolore repellat.',
     altText: 'Bailey Chambers',
   },

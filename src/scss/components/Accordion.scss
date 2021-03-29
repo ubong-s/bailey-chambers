@@ -1,0 +1,47 @@
+@import '../config';
+
+.accordion {
+  &-grid {
+    padding: 2rem 0 0;
+
+    @include media-lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      padding: 2rem 0;
+    }
+
+    &-list {
+      .question {
+        margin-bottom: 1.5rem;
+        @include transition-ease;
+        cursor: pointer;
+
+        &-wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $neutral-color-3;
+          font-weight: 600;
+          font-size: 1.1rem;
+          padding: 1.1rem;
+          margin: 0;
+
+          span {
+            line-height: 0;
+          }
+        }
+
+        h4 {
+          margin-bottom: 0;
+        }
+
+        p {
+          padding: 1.1rem;
+          background-color: rgba($neutral-color-3, $alpha: 0.25);
+          @include transition-ease;
+        }
+      }
+    }
+  }
+}

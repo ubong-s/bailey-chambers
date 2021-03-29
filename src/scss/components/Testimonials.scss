@@ -1,0 +1,86 @@
+@import '../config';
+
+.testimonials {
+  text-align: center;
+
+  &-slider {
+    position: relative;
+    margin: auto;
+    margin-top: 2rem;
+    width: 85%;
+    min-height: 300px;
+
+    @include media-lg {
+      // min-height: 275px;
+      width: 65%;
+      margin-top: 2rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .chevron {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 25%;
+      color: rgba($primary-color, $alpha: 0.9);
+      cursor: pointer;
+      border-radius: 50%;
+      @include transition-ease;
+
+      &:hover {
+        color: rgba($secondary-color, $alpha: 0.7);
+      }
+
+      @include media-lg {
+        font-size: 2.5rem;
+        top: 15%;
+
+        &:hover {
+          background-color: rgba($primary-color, $alpha: 0.25);
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    .prev {
+      left: -15%;
+    }
+    .next {
+      right: -15%;
+    }
+  }
+
+  &-single {
+    position: relative;
+    opacity: 0;
+    @include transition-ease;
+
+    .quote {
+      position: absolute;
+      z-index: -1;
+      color: rgba($primary-color, $alpha: 0.7);
+      font-size: 3rem;
+      top: -1rem;
+      left: 0rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+      color: $primary-color;
+    }
+
+    .inner-wrapper {
+      position: absolute;
+    }
+  }
+
+  &-single.active {
+    opacity: 1;
+  }
+}

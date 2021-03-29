@@ -4,13 +4,10 @@ import SingleExpertBox from './SingleExpertBox';
 import exImg1 from '../images/expert-1.jpg';
 import exImg2 from '../images/expert-2.jpg';
 import exImg3 from '../images/expert-3.jpg';
-import Heading from './Heading';
 
 const OurExperts = () => {
   return (
-    <section className='experts container'>
-      <Heading title='Our Experts' subtitle='meet the experts' />
-
+    <div className='experts container'>
       <div className='experts-grid'>
         <SingleExpertBox
           name='John Doe'
@@ -28,7 +25,7 @@ const OurExperts = () => {
           img={exImg3}
         />
       </div>
-    </section>
+    </div>
   );
 };
 

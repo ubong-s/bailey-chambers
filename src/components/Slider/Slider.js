@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SliderData } from './SliderData';
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import '../../scss/components/Slider.scss';
 
 const Slider = ({ slides }) => {
@@ -20,7 +20,7 @@ const Slider = ({ slides }) => {
   useEffect(() => {
     let slider = setInterval(() => {
       setCurrent(current + 1);
-    }, 9000);
+    }, 6000);
     return () => clearInterval(slider);
   }, [current]);
 
@@ -37,8 +37,8 @@ const Slider = ({ slides }) => {
 
   return (
     <div className='slide'>
-      <FaChevronCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaChevronCircleRight className='right-arrow' onClick={nextSlide} />
+      <FiChevronLeft className='left-arrow' onClick={prevSlide} />
+      <FiChevronRight className='right-arrow' onClick={nextSlide} />
 
       {SliderData.map((slide, index) => {
         return (

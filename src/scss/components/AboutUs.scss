@@ -1,8 +1,6 @@
 @import '../config';
 
 .about {
-  padding: 5rem 0;
-
   .container {
     display: grid;
     background: $neutral-color-3;
@@ -13,8 +11,6 @@
   }
 
   @include media-lg {
-    padding: 7rem 0;
-
     .container {
       grid-template-columns: repeat(2, 1fr);
       align-items: center;

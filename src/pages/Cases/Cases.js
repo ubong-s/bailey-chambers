@@ -7,7 +7,6 @@ import '../../scss/pages/Cases.scss';
 import CTA from '../../components/CTA';
 
 const Cases = () => {
-  console.log(CasesData);
   return (
     <>
       <PageHeader

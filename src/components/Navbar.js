@@ -22,7 +22,7 @@ const Navbar = () => {
   const { y: pageYOffset } = useWindowScroll();
 
   const showFixedNav = () => {
-    if (pageYOffset > 400) {
+    if (pageYOffset > 100) {
       setFixedNav(true);
     } else {
       setFixedNav(false);
@@ -106,7 +106,11 @@ const Navbar = () => {
         <div className={fixedNav ? 'nav-bottom fixed-nav' : 'nav-bottom'}>
           <div className='container'>
             <Link to='/' className='nav-bottom-logo'>
-              <img src={logoAlt} alt='Bailey' />
+              {fixedNav ? (
+                <img src={logo} alt='Bailey' />
+              ) : (
+                <img src={logoAlt} alt='Bailey' />
+              )}
             </Link>
             <ul className='menu-nav'>
               <li className='menu-nav-item'>

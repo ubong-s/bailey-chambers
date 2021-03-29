@@ -21,7 +21,11 @@ const About = () => {
       <AboutUs />
 
       <section className='experts container'>
-        <Heading title='Our Experts' subtitle='meet the experts' />
+        <Heading
+          title='Our Experts'
+          subtitle='meet the experts'
+          bgColor='white-bg'
+        />
 
         <div className='experts-grid'>
           <SingleExpertBox
