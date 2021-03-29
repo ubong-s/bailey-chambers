@@ -96,14 +96,23 @@ const Footer = () => {
         <div className='container'>
           <ul className='footer-col-notice'>
             <li className='footer-col-notice-item'>
-              &copy; Bailey Chambers <span id='date'></span>. All rights
-              reserved.
+              &copy; <span id='date'></span>. All rights reserved.
             </li>
             <li className='footer-col-notice-item'>
               <Link to='/privacy-policy'>Privacy Policy</Link>
             </li>
             <li className='footer-col-notice-item'>
               <Link to='/terms-of-service'>Terms of Service</Link>
+            </li>
+            <li className='footer-col-notice-item dev'>
+              Designed and Developed by
+              <a
+                href='https://www.devubong.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                DevUbong
+              </a>
             </li>
           </ul>
         </div>
