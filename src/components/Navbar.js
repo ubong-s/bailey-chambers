@@ -29,6 +29,12 @@ const Navbar = () => {
     }
   };
 
+  if (click) {
+    document.body.classList.add('no-overflow');
+  } else {
+    document.body.classList.remove('no-overflow');
+  }
+
   const toggleMenu = () => {
     setClick(!click);
   };
@@ -45,9 +51,7 @@ const Navbar = () => {
           <MobileMenu closeMenu={closeMenu} />
         </div>
       ) : (
-        <div className='menu'>
-          <MobileMenu />
-        </div>
+        <div className='menu'>{<MobileMenu />}</div>
       )}
 
       <div className='mobile'>

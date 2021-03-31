@@ -12,9 +12,6 @@ import '../scss/components/Navbar.scss';
 const MobileMenu = ({ closeMenu }) => {
   return (
     <div className='container'>
-      {/* <Link to='/' className='menu-list-link'>
-        <img className='menu-nav-logo' src={logo} />
-      </Link> */}
       <ul className='menu-list'>
         <li className='menu-list-item'>
           <Link to='/' className='menu-list-link' onClick={closeMenu}>

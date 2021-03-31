@@ -21,6 +21,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'logoinfo logoinfo' 'link1 link2' 'social social';
+    gap: 1rem;
     padding: 2.5rem 0 2rem;
 
     &-col {
@@ -50,7 +51,10 @@ footer {
 
       &-social {
         display: flex;
-        gap: 1rem;
+
+        &-item {
+          margin-right: 0.75rem;
+        }
       }
 
       &-notice {
@@ -60,6 +64,7 @@ footer {
 
         &-item {
           font-size: 0.65rem;
+
           margin-bottom: 0.5rem;
         }
       }

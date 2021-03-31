@@ -4,7 +4,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   z-index: 1000;
-  top: -0.2rem;
+  top: 0;
   background-color: white;
   @include transition-ease;
 
@@ -14,15 +14,16 @@ header {
     background: white;
     height: 100vh;
     width: 100vw;
+    top: 0;
     right: 0;
     color: $secondary-color;
-    padding: 2rem 0 0;
+    padding: 1rem 0 0;
     transform: translateX(100%);
     @include transition-ease;
     z-index: 100;
 
     @include media-md {
-      width: 50vw;
+      width: 70vw;
     }
 
     .container {
@@ -35,7 +36,7 @@ header {
     }
 
     &-list {
-      padding: 2rem 0 0;
+      // padding: 1rem 0 0;
       text-align: left;
       font-family: $ff-primary;
       font-size: 1.25rem;
@@ -258,6 +259,11 @@ header {
       }
     }
   }
+}
+
+.no-overflow {
+  height: 100vh;
+  overflow: hidden;
 }
 
 @keyframes slideDown {
