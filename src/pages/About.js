@@ -1,9 +1,12 @@
 import React from 'react';
-import AboutUs from '../components/AboutUs';
-import CTA from '../components/CTA';
-import Heading from '../components/Heading';
-import PageHeader from '../components/PageHeader';
-import SingleExpertBox from '../components/SingleExpertBox';
+import {
+  AboutUs,
+  CTA,
+  Heading,
+  PageHeader,
+  SingleExpertBox,
+} from '../components';
+
 import exImg1 from '../images/expert-1.jpg';
 import exImg2 from '../images/expert-2.jpg';
 import exImg3 from '../images/expert-3.jpg';

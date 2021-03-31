@@ -1,10 +1,9 @@
 import React from 'react';
-import CTA from '../../components/CTA';
-import PageHeader from '../../components/PageHeader';
-
-import bgImg from '../../images/image-3.jpg';
+import { PageHeader, CTA } from '../../components';
 import { CareersData } from './CareersData';
 import CareerSingle from './CareerSingle';
+
+import bgImg from '../../images/image-3.jpg';
 
 const Careers = () => {
   return (

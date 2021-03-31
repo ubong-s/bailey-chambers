@@ -1,13 +1,15 @@
 import React from 'react';
-import Slider from '../components/Slider/Slider';
-import { SliderData } from '../components/Slider/SliderData';
-import AboutUs from '../components/AboutUs';
-import CTA from '../components/CTA';
-import Testimonials from '../components/Testimonials/Testimonials';
-import { TestimonialsData } from '../components/Testimonials/TestimonialsData';
-import OurExperts from '../components/OurExperts';
-import Heading from '../components/Heading';
-import PracticeAreas from '../components/PracticeAreas';
+import {
+  Slider,
+  SliderData,
+  AboutUs,
+  CTA,
+  Testimonials,
+  TestimonialsData,
+  OurExperts,
+  Heading,
+  PracticeAreas,
+} from '../components';
 
 const Home = () => {
   return (

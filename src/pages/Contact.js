@@ -1,10 +1,8 @@
 import React from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaMobile } from 'react-icons/fa';
-import PageHeader from '../components/PageHeader';
+import { PageHeader, Accordion } from '../components';
 import '../scss/pages/Contact.scss';
-
 import bgImg from '../images/image-5.jpg';
-import Accordion from '../components/Accordion/Accordion';
 import WrappedMap from '../components/Map';
 
 const Contact = () => {

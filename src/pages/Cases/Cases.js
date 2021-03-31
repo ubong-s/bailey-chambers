@@ -1,10 +1,8 @@
 import React from 'react';
-import CaseSection from '../../components/CaseSection';
-import PageHeader from '../../components/PageHeader';
+import { PageHeader, CTA, CaseSection } from '../../components';
 import bgImg from '../../images/image-1.jpg';
 import { CasesData } from './CasesData';
 import '../../scss/pages/Cases.scss';
-import CTA from '../../components/CTA';
 
 const Cases = () => {
   return (
@@ -19,7 +17,6 @@ const Cases = () => {
         {CasesData.map((item) => {
           const { id } = item;
 
-          console.log(item);
           return <CaseSection key={id} {...item} />;
         })}
       </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../scss/components/PracticeAreas.scss';
 import { FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const PracticeAreas = () => {
   return (
@@ -55,7 +56,9 @@ const PracticeAreas = () => {
         </div>
       </div>
       <div className='cta-p container'>
-        <button className='btn'>Find out more</button>
+        <Link to='/services' className='btn'>
+          Find out more
+        </Link>
       </div>
     </section>
   );

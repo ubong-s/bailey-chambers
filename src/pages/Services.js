@@ -1,16 +1,13 @@
 import React from 'react';
-import PageHeader from '../components/PageHeader';
-import ServiceBox from '../components/ServiceBox';
+import { PageHeader, ServiceBox, CTA } from '../components';
 import injury from '../images/injury.jpg';
 import banking from '../images/banking.jpg';
 import corporate from '../images/corporate.jpg';
 import justice from '../images/justice.jpg';
 import family from '../images/family.jpg';
 import business from '../images/business.jpg';
-import '../scss/pages/Services.scss';
-
 import bgImg from '../images/image-2.jpg';
-import CTA from '../components/CTA';
+import '../scss/pages/Services.scss';
 
 const Services = () => {
   return (
