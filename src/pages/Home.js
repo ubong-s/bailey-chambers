@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { containerVariants } from '../animation';
 import {
   Slider,
   SliderData,
@@ -13,7 +15,12 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <main>
         <Slider slides={SliderData} />
       </main>
@@ -29,7 +36,7 @@ const Home = () => {
       </section>
       <Testimonials testimonials={TestimonialsData} />
       <CTA headline='Want to find out more?' />
-    </>
+    </motion.div>
   );
 };
 

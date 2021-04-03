@@ -14,6 +14,8 @@ import logo from '../logo.svg';
 import logoAlt from '../logo_alt.svg';
 import '../scss/components/Navbar.scss';
 import MobileMenu from './MobileMenu';
+import { motion } from 'framer-motion';
+import { fadeInVar } from '../animation';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -22,7 +24,7 @@ const Navbar = () => {
   const { y: pageYOffset } = useWindowScroll();
 
   const showFixedNav = () => {
-    if (pageYOffset > 100) {
+    if (pageYOffset > 400) {
       setFixedNav(true);
     } else {
       setFixedNav(false);
@@ -113,7 +115,13 @@ const Navbar = () => {
               {fixedNav ? (
                 <img src={logo} alt='Bailey' />
               ) : (
-                <img src={logoAlt} alt='Bailey' />
+                <motion.img
+                  src={logoAlt}
+                  alt='Bailey'
+                  variants={fadeInVar}
+                  initial='hidden'
+                  animate='visible'
+                />
               )}
             </Link>
             <ul className='menu-nav'>

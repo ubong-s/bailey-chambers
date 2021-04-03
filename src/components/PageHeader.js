@@ -1,9 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeInVar } from '../animation';
 import '../scss/components/PageHeader.scss';
 
 const PageHeader = ({ headline, subheading, img }) => {
   return (
     <section
+      variants={fadeInVar}
       className='page-hero'
       style={
         img
@@ -12,8 +15,8 @@ const PageHeader = ({ headline, subheading, img }) => {
       }
     >
       <div className='container'>
-        <h1>{headline}</h1>
-        <h4>{subheading}</h4>
+        <motion.h1 variants={fadeInVar}>{headline}</motion.h1>
+        <motion.h4 variants={fadeInVar}>{subheading}</motion.h4>
       </div>
     </section>
   );

@@ -1,15 +1,18 @@
 import React from 'react';
+import { FadeInWhenVisible } from '../../animation';
 import '../../scss/pages/Careers.scss';
 
 const CareerSingle = ({ position, description }) => {
   return (
-    <div className='career'>
-      <div className='career-info'>
-        <h3>{position}</h3>
-        <p>{description}</p>
+    <FadeInWhenVisible>
+      <div className='career'>
+        <div className='career-info'>
+          <h3>{position}</h3>
+          <p>{description}</p>
+        </div>
+        <button className='btn'>Apply</button>
       </div>
-      <button className='btn'>Apply</button>
-    </div>
+    </FadeInWhenVisible>
   );
 };
 

@@ -4,10 +4,17 @@ import { PageHeader, Accordion } from '../components';
 import '../scss/pages/Contact.scss';
 import bgImg from '../images/image-5.jpg';
 import WrappedMap from '../components/Map';
+import { motion } from 'framer-motion';
+import { containerVariants } from '../animation';
 
 const Contact = () => {
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <PageHeader
         headline='Contact'
         subheading='Bailey Chambers // Contact'
@@ -78,7 +85,7 @@ const Contact = () => {
         containerElement={<div style={{ height: `500px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       /> */}
-    </>
+    </motion.div>
   );
 };
 

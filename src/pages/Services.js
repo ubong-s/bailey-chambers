@@ -8,10 +8,17 @@ import family from '../images/family.jpg';
 import business from '../images/business.jpg';
 import bgImg from '../images/image-2.jpg';
 import '../scss/pages/Services.scss';
+import { motion } from 'framer-motion';
+import { containerVariants } from '../animation';
 
 const Services = () => {
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <PageHeader
         headline='Services'
         subheading='Bailey Chambers // Services'
@@ -53,7 +60,7 @@ const Services = () => {
       </section>
 
       <CTA headline='Interested in our services' />
-    </>
+    </motion.div>
   );
 };
 

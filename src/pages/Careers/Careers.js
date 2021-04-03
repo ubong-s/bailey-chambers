@@ -4,10 +4,17 @@ import { CareersData } from './CareersData';
 import CareerSingle from './CareerSingle';
 
 import bgImg from '../../images/image-3.jpg';
+import { motion } from 'framer-motion';
+import { containerVariants } from '../../animation';
 
 const Careers = () => {
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <PageHeader
         headline='Careers'
         subheading='Bailey Chambers // Careers'
@@ -22,7 +29,7 @@ const Careers = () => {
       </section>
 
       <CTA headline='Make position enquiries' />
-    </>
+    </motion.div>
   );
 };
 

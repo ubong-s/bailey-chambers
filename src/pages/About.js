@@ -1,4 +1,6 @@
 import React from 'react';
+import { containerVariants } from '../animation';
+import { motion } from 'framer-motion';
 import {
   AboutUs,
   CTA,
@@ -14,7 +16,12 @@ import bgImg from '../images/image-6.jpg';
 
 const About = () => {
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <PageHeader
         headline='About Us'
         subheading='Bailey Chambers // About Us'
@@ -50,7 +57,7 @@ const About = () => {
       </section>
 
       <CTA headline='Got any questions?' />
-    </>
+    </motion.div>
   );
 };
 
